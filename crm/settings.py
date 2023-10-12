@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 from pathlib import Path
 import os
+import logging
+import logging.handlers
 import dj_database_url
 if os.path.isfile('env.py'):
     import env

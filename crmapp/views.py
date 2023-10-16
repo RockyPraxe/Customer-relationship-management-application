@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from .models import *
 
 
 # Create your views here.
@@ -8,7 +9,8 @@ def home(request):
 
 
 def products(request):
-    return render(request, 'crmapp/products.html')
+    products = Product.objects.all()
+    return render(request, 'crmapp/products.html', {'products': products})
 
 
 def customer(request):

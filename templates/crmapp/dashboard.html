@@ -47,10 +47,13 @@
 
                 {% for order in orders %}
                 <tr>
-                    
+
                     <td>{{ order.product }}</td>
                     <td>{{ order.data_created }}</td>
                     <td>{{ order.status }}</td>
+                    <td><a href="">Update</a></td>
+                    <td><a href="">Delate</a></td>
+
                 </tr>
                 {% endfor %}
 

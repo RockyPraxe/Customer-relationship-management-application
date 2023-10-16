@@ -13,3 +13,7 @@ def products(request):
 
 def customer(request):
     return render(request, 'crmapp/customer.html')
+
+
+def order(request):
+    return render(request, 'crmapp/order.html')

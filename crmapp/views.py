@@ -5,11 +5,17 @@ from .models import *
 
 # Create your views here.
 def home(request):
-    return render(request, 'crmapp/dashboard.html')
+    orders = Order.objects.all()
+    customers = Customer.objects.all()
+
+    context = {'orders': orders, 'customers': customers}
+
+    return render(request, 'crmapp/dashboard.html', context)
 
 
 def products(request):
     products = Product.objects.all()
+
     return render(request, 'crmapp/products.html', {'products': products})
 
 

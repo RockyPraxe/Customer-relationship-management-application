@@ -46,3 +46,9 @@ def customer(request, pk_test):
 
 def order(request):
     return render(request, 'crmapp/order.html')
+
+
+def createOrder(request):
+
+    context = {}
+    return render(request, 'crmapp/order_form.html', context)

@@ -1,8 +1,9 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
-from django .forms import inlineformset_factory
+from django.forms import inlineformset_factory
 from .models import *
 from .forms import OrderForm
+from .filters import OrderFilter
 
 
 # Create your views here.
@@ -37,10 +38,14 @@ def customer(request, pk_test):
     orders = customer.order_set.all()
     order_count = orders.count()
 
+    myFilter = OrderFilter(request.GET, queryset=orders)
+    orders = myFilter.qs
+
     context = {
                 'customer': customer,
                 'orders': orders,
-                'order_count': order_count
+                'order_count': order_count,
+                'myFilter': myFilter
             }
 
     return render(request, 'crmapp/customer.html', context)
@@ -60,6 +65,7 @@ def createOrder(request, pk):
     customer = Customer.objects.get(id=pk)
     formset = OrderFormSet(queryset=Order.objects.none(), instance=customer)
     if request.method == 'POST':
+        form = OrderForm(request.POST)
         formset = OrderFormSet(request.POST, instance=customer)
         if formset.is_valid():
             formset.save()
@@ -79,7 +85,7 @@ def updateOrder(request, pk):
             form.save()
             return redirect('/')
 
-    context = {'form': form}
+    context = {'formset': form}
     return render(request, 'crmapp/order_form.html', context)
 
 

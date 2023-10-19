@@ -11,32 +11,38 @@ from .filters import OrderFilter
 
 
 def registerPage(request):
-    form = CreateUserForm()
+    if request.user.is_authenticated:
+        return redirect('home')
+    else:
+        form = CreateUserForm()
+        if request.method == 'POST':
+            form = CreateUserForm(request.POST)
+            if form.is_valid():
+                form.save()
+                user = form.cleaned_data.get('username')
+                messages.success(request, 'Account was created for' + user)
+                return redirect('login')
 
-    if request.method == 'POST':
-        form = CreateUserForm(request.POST)
-        if form.is_valid():
-            form.save()
-            user = form.cleaned_data.get('username')
-            messages.success(request, 'Account was created for' + user)
-            return redirect('login')
-
-    context = {'form': form}
-    return render(request, 'crmapp/register.html', context)
+        context = {'form': form}
+        return render(request, 'crmapp/register.html', context)
 
 
 def loginPage(request):
-    if request.method == 'POST':
-        username = request.POST.get('username')
-        password = request.POST.get('password')
-        user = authenticate(request, username=username, password=password)
-        if user is not None:
-            login(request, user)
-            return redirect('home')
-        else:
-            messages.info(request, 'Username OR password is incorrect')
-    context = {}
-    return render(request, 'crmapp/login.html', context)
+    if request.user.is_authenticated:
+        return redirect('home')
+    else:
+        if request.method == 'POST':
+            username = request.POST.get('username')
+            password = request.POST.get('password')
+            user = authenticate(request, username=username, password=password)
+            if user is not None:
+                login(request, user)
+                return redirect('home')
+            else:
+                messages.info(request, 'Username OR password is incorrect')
+
+        context = {}
+        return render(request, 'crmapp/login.html', context)
 
 
 def logoutUser(request):
@@ -63,6 +69,11 @@ def home(request):
             }
 
     return render(request, 'crmapp/dashboard.html', context)
+
+
+def userPage(request):
+    context = {}
+    return render(request, 'crmapp/user.html', context)
 
 
 @login_required(login_url='login')
@@ -105,6 +116,7 @@ def createOrder(request, pk):
     )
     customer = Customer.objects.get(id=pk)
     formset = OrderFormSet(queryset=Order.objects.none(), instance=customer)
+
     if request.method == 'POST':
         form = OrderForm(request.POST)
         formset = OrderFormSet(request.POST, instance=customer)
@@ -134,6 +146,7 @@ def updateOrder(request, pk):
 @login_required(login_url='login')
 def deleteOrder(request, pk):
     order = Order.objects.get(id=pk)
+
     if request.method == "POST":
         order.delete()
         return redirect('/')

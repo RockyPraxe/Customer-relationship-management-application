@@ -7,7 +7,7 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import Group
 from .models import *
-from .forms import OrderForm, CreateUserForm
+from .forms import OrderForm, CreateUserForm, CustomerForm
 from .filters import OrderFilter
 from .decorators import unauthenticated_user, allowed_users, admin_only
 
@@ -94,6 +94,15 @@ def userPage(request):
             }
 
     return render(request, 'crmapp/user.html', context)
+
+
+@login_required(login_url='login')
+@allowed_users(allowed_roles=['customer'])
+def accountSettings(request):
+    user = request.user
+    form = CustomerForm(instance=user)
+    context = {'form': form}
+    return render(request, 'crmapp/account_settings.html', context)
 
 
 @login_required(login_url='login')

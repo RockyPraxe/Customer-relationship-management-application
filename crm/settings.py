@@ -46,7 +46,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'cloudinary',
     'django_filters',
-    'crmapp',
+    'crmapp.apps.CrmappConfig',
 ]
 
 MIDDLEWARE = [

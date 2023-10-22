@@ -21,11 +21,6 @@ def registerPage(request):
         if form.is_valid():
             user = form.save()
             username = form.cleaned_data.get('username')
-
-            group = Group.objects.get(name='customer')
-            user.groups.add(group)
-            Customer.objects.create(user=user)
-
             messages.success(request, 'Account was created for' + username)
             return redirect('login')
 
@@ -139,8 +134,8 @@ def customer(request, pk_test):
     return render(request, 'crmapp/customer.html', context)
 
 
-def order(request):
-    return render(request, 'crmapp/order.html')
+# def order(request):
+#     return render(request, 'crmapp/order.html')
 
 
 @login_required(login_url='login')
@@ -178,7 +173,7 @@ def updateOrder(request, pk):
             form.save()
             return redirect('/')
 
-    context = {'formset': form}
+    context = {'form': form}
     return render(request, 'crmapp/order_form.html', context)
 
 

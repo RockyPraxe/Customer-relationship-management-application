@@ -1,4 +1,4 @@
-{% extends 'crmapp/base.html' %}
+{%  extends 'crmapp/base.html' %}
 {% load static %}
 {% block content %}
 
@@ -8,9 +8,9 @@
 
             <form action="" method="POST">
                 {% csrf_token %}
-                {{ formset.management_form }}
-                {% for form in formset %}
-                {{ form }}
+                {{ form.management_form }}
+                {% for field in form %}
+                {{ field }}
                 <hr>
                 {% endfor %}
 

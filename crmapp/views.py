@@ -148,6 +148,7 @@ def createOrder(request, pk):
         extra=10
     )
     customer = Customer.objects.get(id=pk)
+    print('Customer:', customer)
     formset = OrderFormSet(queryset=Order.objects.none(), instance=customer)
 
     if request.method == 'POST':
@@ -157,7 +158,7 @@ def createOrder(request, pk):
             formset.save()
             return redirect('/')
 
-    context = {'formset': formset}
+    context = {'form': formset}
     return render(request, 'crmapp/order_form.html', context)
 
 
@@ -166,14 +167,16 @@ def createOrder(request, pk):
 def updateOrder(request, pk):
     order = Order.objects.get(id=pk)
     form = OrderForm(instance=order)
-
+    print('ORDER:', order)
     if request.method == 'POST':
+
         form = OrderForm(request.POST, instance=order)
         if form.is_valid():
             form.save()
             return redirect('/')
 
     context = {'form': form}
+    print('I got here')
     return render(request, 'crmapp/order_form.html', context)
 
 

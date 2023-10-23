@@ -1,9 +1,12 @@
 {% load static %}
+<!-- Load static files and resources for the template -->
+
 
 <!DOCTYPE html>
 <html>
 
 <head>
+    <!-- The document's head section containing metadata and links -->
     <title>Register</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
@@ -22,48 +25,54 @@
                     <h3 id="form-title">REGISTER ACCOUNT</h3>
                 </div>
                 <div class="d-flex justify-content-center form_container">
-
+                    <!-- Create a container for the registration form -->
+                    <!-- Which contains fields for registration data -->
                     <form method="POST" action="">
+                        <!-- Create a form with the 'POST' method -->
                         {% csrf_token %}
+                        <!-- Include the CSRF token for security -->
                         <div class="input-group mb-3">
                             <div class="input-group-append">
                                 <span class="input-group-text"><i class="fas fa-user"></i></span>
                             </div>
-                            {{form.username}}
+                            {{ form.username }}
+                            <!-- Display the username form field -->
                         </div>
                         <div class="input-group mb-2">
                             <div class="input-group-append">
                                 <span class="input-group-text"><i class="fas fa-envelope-square"></i></span>
                             </div>
-                            {{form.email}}
+                            {{ form.email }}
+                            <!-- Display the email form field -->
                         </div>
                         <div class="input-group mb-2">
                             <div class="input-group-append">
                                 <span class="input-group-text"><i class="fas fa-key"></i></span>
                             </div>
-                            {{form.password1}}
+                            {{ form.password1 }}
+                            <!-- Display the first password form field -->
                         </div>
                         <div class="input-group mb-2">
                             <div class="input-group-append">
                                 <span class="input-group-text"><i class="fas fa-key"></i></span>
                             </div>
-                            {{form.password2}}
+                            {{ form.password2 }}
+                            <!-- Display the second password form field -->
                         </div>
-
-
-
                         <div class="d-flex justify-content-center mt-3 login_container">
                             <input class="btn login_btn" type="submit" value="Register Account">
+                            <!-- Create a button to submit the registration form -->
                         </div>
-
                     </form>
                 </div>
 
-                {{form.errors}}
+                {{ form.errors }}
+                <!-- Display form validation errors if any -->
 
                 <div class="mt-4">
                     <div class="d-flex justify-content-center links">
                         Already have an account? <a href="{% url 'login' %}" class="ml-2">Login</a>
+                        <!-- Provide a link to the login page if the user already has an account -->
                     </div>
                 </div>
             </div>
@@ -85,6 +94,7 @@
         for (var field in form_fields) {
             form_fields[field].className += ' form-control'
         }
+        // Add the 'form-control' class to form fields for styling
     </script>
 </body>
 

@@ -1,12 +1,16 @@
 {% extends 'crmapp/base.html' %}
+<!-- Extends the base template 'base.html' for this page -->
 
 {% load static %}
+<!-- Load static files and resources for the template -->
 
 {% block content %}
+<!-- Define the content block that will be inserted into the base template -->
 
 
 <br>
 <div class="row">
+    <!-- Create a Bootstrap row to organize content -->
     <div class="col-md-3">
         <div class="card card-body form-color">
             <a class="btn btn-color" href="{% url 'home' %}"> &#8592; Back to Profile</a>
@@ -17,8 +21,11 @@
     <div class="col-md-9">
         <div class="card card-body form-color">
             <form method="POST" action="" enctype="multipart/form-data">
+                <!-- Create a form with method 'POST' and file upload support -->
                 {% csrf_token %}
+                <!-- Add a CSRF token for security -->
                 {{ form.as_p }}
+                <!-- Render the form fields as paragraphs -->
                 <input class="btn btn-color" type="submit" name="Update Information">
             </form>
         </div>
@@ -27,3 +34,4 @@
 
 
 {% endblock %}
+<!-- End of the 'content' block definition -->

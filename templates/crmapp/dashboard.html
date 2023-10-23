@@ -1,17 +1,25 @@
 {% extends 'crmapp/base.html' %}
+<!-- Extend the 'base.html' template for this page -->
+
 
 {% block content %}
+<!-- Define the content block that can be overridden in child templates -->
+
 
 {% include 'crmapp/status.html' %}
+<!-- Include the 'status.html' template to display status information -->
+
 
 <br>
 
 <div class="row">
+    <!-- Create a Bootstrap row to organize content -->
     <div class="col-md-5">
         <h5 class="text-color">CUSTOMERS:</h5>
         <div class="card card-body form-color">
             <!-- <a class="btn btn-primary  btn-sm btn-block" href="">Create Customer</a> -->
             <table class="table table-sm">
+                <!-- Create a table for listing customers -->
                 <tr>
                     <th></th>
                     <th>Customer</th>
@@ -19,21 +27,26 @@
                 </tr>
 
                 {% for customer in customers %}
+                <!-- Loop through a list of customers -->
                 <tr>
                     <td><a class="btn btn-sm btn-view" href="{% url 'customer' customer.id %}">View</a></td>
+                    <!-- Add a button to view customer details and place order -->
                     <td>{{ customer.name }}</td>
                     <td>{{ customer.phone }}</td>
                 </tr>
                 {% endfor %}
+                <!-- End loop -->
 
             </table>
         </div>
     </div>
 
     <div class="col-md-7">
+        <!-- Define a column for displaying last orders -->
         <h5 class="text-color">LAST ORDERS</h5>
         <div class="card card-body form-color">
             <table class="table table-sm">
+                <!-- Create a table for listing orders -->
                 <tr>
                     <th>Product</th>
                     <th>Date Orderd</th>
@@ -43,8 +56,9 @@
                 </tr>
 
                 {% for order in orders %}
+                <!-- Loop through a list of orders -->
                 <tr>
-
+                    <!-- Display order details -->
                     <td>{{ order.product }}</td>
                     <td>{{ order.date_created }}</td>
                     <td>{{ order.status }}</td>
@@ -53,6 +67,7 @@
 
                 </tr>
                 {% endfor %}
+                <!-- End loop -->
 
             </table>
         </div>
@@ -61,3 +76,4 @@
 </div>
 
 {% endblock %}
+<!-- End of the 'content' block definition -->

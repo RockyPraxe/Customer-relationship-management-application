@@ -1,20 +1,31 @@
 {% extends 'crmapp/base.html' %}
+<!-- Extend the 'base.html' template for this page -->
+
 {% load static %}
+<!-- Load static files and resources for the template -->
+
 {% block content %}
+<!-- Define the content block that can be overridden in child templates -->
+
 
 <br>
 <div class="row">
+    <!-- Create a Bootstrap row to organize content -->
     <div class="col-md-6">
         <div class="card card-body">
             <p>Are you sure you want to delete "{{ item }}"?</p>
-
+            <!-- Display a confirmation message for item deletion -->
             <form action="{% url 'delete_order' item.id %}" method="POST">
+                <!-- Create a form for item deletion with the 'POST' method -->
                 {% csrf_token %}
+                <!-- Include a CSRF token for security -->
                 <a class="btn btn-warning" href="{% url 'home' %}">Cancel</a>
                 <input class="btn btn-color" type="submit" name="Confirm">
+                <!-- Add a "Confirm" button to confirm item deletion -->
             </form>
         </div>
     </div>
 </div>
 
 {% endblock %}
+<!-- End of the 'content' block definition -->

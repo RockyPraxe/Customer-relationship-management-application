@@ -1,38 +1,46 @@
 <br>
 
 <div class="row">
+    <!-- Create a row for card elements -->
     <div class="col">
+        <!-- Define a column for each card -->
         <div class="col-md">
+            <!-- Total Orders Card -->
             <div class="card text-center text-white  mb-3" id="total-orders">
                 <div class="card-header">
                     <h5 class="card-title">Total Orders</h5>
                 </div>
                 <div class="card-body">
                     <h3 class="card-title">{{ total_orders }}</h3>
+                    <!-- Display the total orders value dynamically -->
                 </div>
             </div>
         </div>
     </div>
     <div class="col">
         <div class="col-md">
+            <!-- Orders Delivered Card -->
             <div class="card text-center text-white  mb-3" id="orders-delivered">
                 <div class="card-header">
                     <h5 class="card-title">Orders Delivered</h5>
                 </div>
                 <div class="card-body">
                     <h3 class="card-title">{{ delivered }}</h3>
+                    <!-- Display the delivered orders value dynamically -->
                 </div>
             </div>
         </div>
     </div>
     <div class="col">
         <div class="col-md">
+            <!-- Orders Pending Card -->
             <div class="card text-center text-white  mb-3" id="orders-pending">
                 <div class="card-header">
                     <h5 class="card-title">Orders Pending</h5>
                 </div>
                 <div class="card-body">
                     <h3 class="card-title">{{ pending }}</h3>
+                    <!-- Display the pending orders value dynamically -->
                 </div>
             </div>
         </div>

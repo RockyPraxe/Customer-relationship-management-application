@@ -1,15 +1,19 @@
 {% load static %}
+<!-- Load static files and resources for the template -->
 
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <a class="navbar-brand" href="#">CRM APP</a>
+    <!-- Create a Bootstrap navbar with dark background -->
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
+    <!-- Add a toggle button for mobile navigation -->
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
             {% if request.user.is_staff %}
+            <!-- Check if the user is staff (an admin) -->
             <li class="nav-item active">
                 <a class="nav-link" href="{% url 'home' %}">Dashboard</a>
             </li>
@@ -17,12 +21,17 @@
                 <a class="nav-link" href="{% url 'products' %}">Products</a>
             </li>
             {% else %}
+            <!-- If the user is not staff (not an admin) -->
+            <!-- Login the user to user.html -->
             <li class="nav-item">
                 <a class="nav-link" href="{% url 'account' %}">Settings</a>
             </li>
             {% endif %}
+            <!-- End if statement -->
         </ul>
     </div>
     <span class="hello-msg">Hello, {{ request.user }} </span>
     <span><a class="hello-msg" href="{% url 'logout' %}">Logout</a></span>
+    <!-- Add a "Logout" link for users to log out -->
+
 </nav>

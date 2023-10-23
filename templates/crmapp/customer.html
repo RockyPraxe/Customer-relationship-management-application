@@ -1,16 +1,19 @@
 {% extends 'crmapp/base.html' %}
+<!-- Extends the 'base.html' template for this page -->
+
 
 {% block content %}
+<!-- Define the content block that can be overridden in child templates -->
+
 
 <br>
 
 <div class="row">
+    <!-- Create a Bootstrap row to organize content -->
     <div class="col-md">
         <div id="total-orders" class="card card-body">
             <h5>Customer</h5>
             <hr>
-            <!-- <a class="btn btn-outline-info btn-sm btn-block" href="{% url 'account' %}">Update
-            Customer</a> -->
             <a class="btn btn-sm btn-block btn-color" href="{% url 'create_order' customer.id %}">Place Order</a>
         </div>
     </div>
@@ -20,6 +23,7 @@
             <hr>
             <p>Email: {{ customer.email }} </p>
             <p>Phone: {{ customer.phone }}</p>
+            <!-- Display email and phone details -->
         </div>
     </div>
     <div class="col-md">
@@ -27,6 +31,7 @@
             <h5>Total Orders</h5>
             <hr>
             <h1 class="orders">{{ order_count }}</h1>
+            <!-- Display the total number of orders -->
         </div>
     </div>
 </div>
@@ -35,7 +40,9 @@
     <div class="col">
         <div class="card card-body form-color">
             <form method="get">
+                <!-- Create a form with the 'get' method for searching -->
                 {{ myFilter.form }}
+                <!-- Render the search form fields -->
                 <button class="btn btn-color" type="submit">Search</button>
             </form>
         </div>
@@ -43,6 +50,7 @@
 </div>
 <br>
 <div class="row">
+    <!-- Create a new row for displaying a list of orders -->
     <div class="col-md">
         <div class="card card-body form-color">
             <table class="table table-sm">
@@ -56,15 +64,18 @@
                 </tr>
 
                 {% for order in orders %}
+                <!-- Loop through a list of orders -->
                 <tr>
+                    <!-- Display order details -->
                     <td>{{ order.product }}</td>
                     <td>{{ order.note }}</td>
                     <td>{{ order.date_created }}</td>
                     <td>{{ order.status }}</td>
                     <td><a class="btn btn-sm btn-color" href="{% url 'update_order' order.id %}">Update</a></td>
 
-					<td><a class="btn btn-sm btn-danger" href="{% url 'delete_order' order.id %}">Delete</a></td>
+                    <td><a class="btn btn-sm btn-danger" href="{% url 'delete_order' order.id %}">Delete</a></td>
                 </tr>
+                <!-- End of the loop -->
                 {% endfor %}
 
             </table>
@@ -73,5 +84,4 @@
 </div>
 
 {% endblock %}
-
-
+<!-- End of the 'content' block definition -->

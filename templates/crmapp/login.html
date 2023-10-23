@@ -1,9 +1,12 @@
 {% load static %}
+<!-- Load static files and resources for the template -->
+
 
 <!DOCTYPE html>
 <html>
 
 <head>
+    <!-- The document's head section containing metadata and links -->
     <title>Login</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
@@ -16,17 +19,20 @@
 </head>
 
 <body>
+    <!-- Start the page's body -->
     <div class="container h-100">
         <div class="d-flex justify-content-center h-100">
             <div class="user_card">
+                <!-- Create a card for the user interface -->
+                <!-- Which contains fields for login data -->
                 <div class="d-flex justify-content-center">
-
-
                     <h3 id="form-title">LOGIN</h3>
                 </div>
                 <div class="d-flex justify-content-center form_container">
                     <form method="POST" action="">
+                        <!-- Create a form with the 'POST' method -->
                         {% csrf_token %}
+                        <!-- Include a CSRF token for security -->
                         <div class="input-group mb-3">
                             <div class="input-group-append">
                                 <span class="input-group-text"><i class="fas fa-user"></i></span>
@@ -42,18 +48,22 @@
 
                         <div class="d-flex justify-content-center mt-3 login_container">
                             <input class="btn login_btn" type="submit" value="Login">
+                            <!-- Create a login button -->
                         </div>
                     </form>
-
                 </div>
 
                 {% for message in messages %}
+                <!-- Loop through and display messages -->
                 <p id="messages">{{ message }}</p>
+                <!-- Display messages with the 'messages' ID -->
                 {% endfor %}
+                <!-- End loop -->
 
                 <div class="mt-4">
                     <div class="d-flex justify-content-center links">
                         Don't have an account? <a href="{% url 'register' %}" class="ml-2">Sign Up</a>
+                        <!-- Provide a link to the registration page -->
                     </div>
 
                 </div>

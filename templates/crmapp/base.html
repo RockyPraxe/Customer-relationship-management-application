@@ -1,9 +1,12 @@
 {% load static %}
+<!-- Load static files and resources for the template using Django's 'load' tag -->
+
 
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
+    <!-- The document's head section containing metadata and links -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CRM</title>
@@ -12,17 +15,18 @@
     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
 </head>
 
+
 <body>
     {% include 'crmapp/navbar.html' %}
+    <!-- Include a navigation bar using Django's 'include' tag -->
 
     {% block content %}
-
-
+    <!-- Define a block named 'content' that can be overridden in child templates -->
 
     {% endblock %}
-
+    <!-- End of the 'content' block definition -->
     <hr>
-
+    <!-- footer from bootstrap template -->
     <footer class="bg-light text-center text-white">
         <!-- Grid container -->
         <div class="container p-4 pb-0">
@@ -66,6 +70,8 @@
     </footer>
 </body>
 
+
+<!-- Include JavaScript libraries and Font Awesome icons from CDNs -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
 </script>

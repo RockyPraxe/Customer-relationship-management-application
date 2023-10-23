@@ -1,16 +1,21 @@
 {% extends 'crmapp/base.html' %}
+<!-- Extend the 'base.html' template for this page -->
 
 {% block content %}
+<!-- Define the content block that can be overridden in child templates -->
 
 <br>
 
 <div class="row">
+    <!-- Create a Bootstrap row to organize content -->
     <div class="col-md">
         <div class="card card-body form-color">
+            <!-- Create a card for displaying products -->
             <h5>Products</h5>
         </div>
         <div class="card card-body form-color">
             <table class="table">
+                <!-- Create a table to display product information -->
                 <tr>
                     <th>Product</th>
                     <th>Category</th>
@@ -18,13 +23,17 @@
                 </tr>
 
                 {% for product in products %}
-                    <tr>
-                        <td>{{ product.name }}</td>
-                        <td>{{ product.category }}</td>
-                        <td>{{ product.price }}</td>
-                    </tr>
+                <!-- Loop through the list of products -->
+                <tr>
+                    <td>{{ product.name }}</td>
+                    <!-- Display the product name -->
+                    <td>{{ product.category }}</td>
+                    <!-- Display the product category -->
+                    <td>{{ product.price }}</td>
+                    <!-- Display the product price -->
+                </tr>
                 {% endfor %}
-
+                <!-- End loop -->
             </table>
         </div>
     </div>
@@ -32,3 +41,4 @@
 
 
 {% endblock content %}
+<!-- End of the 'content' block definition -->

@@ -1,20 +1,34 @@
 {%  extends 'crmapp/base.html' %}
+<!-- Extend the 'base.html' template for this page -->
+
 {% load static %}
+<!-- Load static files and resources for the template -->
+
 {% block content %}
+<!-- Define the content block that can be overridden in child templates -->
+
 
 <div class="row">
+    <!-- Create a Bootstrap row to organize content -->
     <div class="col-md-6">
         <div class="card card-body form-color">
 
             <form action="" method="POST">
+                <!-- Create a form with the 'POST' method -->
                 {% csrf_token %}
+                <!-- Include a CSRF token for security -->
                 {{ form.management_form }}
+                <!-- Include management form data -->
                 {% for field in form %}
+                <!-- Loop through the fields in the form -->
                 {{ field }}
+                <!-- Display the form field -->
                 <hr>
                 {% endfor %}
+                <!-- End loop -->
 
                 <input type="submit" name="Submit">
+                <!-- Add a submit button to send the form data -->
             </form>
 
         </div>
@@ -22,3 +36,4 @@
 </div>
 
 {% endblock %}
+<!-- End of the 'content' block definition -->

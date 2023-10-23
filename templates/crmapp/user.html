@@ -1,12 +1,16 @@
 {% extends 'crmapp/base.html' %}
+<!-- Extend the 'base.html' template for this page -->
 
 {% block content %}
+<!-- Define the content block for this page -->
 
 {% include 'crmapp/status.html' %}
+<!-- Include the 'status.html' template -->
 
 <div class="row">
     <div class="col-md">
         <div class="card card-body form-color">
+            <!-- Create a card with a form-like appearance -->
             <table class="table table-sm">
                 <tr>
                     <th>Product</th>
@@ -16,14 +20,19 @@
                 </tr>
 
                 {% for order in orders %}
+                <!-- Loop through the 'orders' data and generate rows -->
                 <tr>
                     <td>{{ order.product }}</td>
+                    <!-- Display the product name for the order -->
                     <td>{{ order.note }}</td>
+                    <!-- Display any additional notes for the order -->
                     <td>{{ order.date_created }}</td>
+                    <!-- Display the order creation date -->
                     <td>{{ order.status }}</td>
+                    <!-- Display the order status -->
                 </tr>
                 {% endfor %}
-
+                <!-- End loop -->
             </table>
         </div>
     </div>
@@ -31,3 +40,4 @@
 
 
 {% endblock %}
+<!-- End of the 'content' block -->

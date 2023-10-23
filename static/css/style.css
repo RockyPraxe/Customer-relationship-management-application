@@ -6,24 +6,58 @@
 
 
 body {
-    background-color: #ebeff5;
+    background-color: #343A40;
+}
+
+
+footer {
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    width: 100%;
+    box-sizing: border-box;
+    min-height: 80px;
+    padding-top: 5px;
+    text-align: center;
 }
 
 
 #total-orders {
-    background-color: #4cb4c7;
+    background-color: #B1BE89;
 }
 
 
 #orders-delivered {
-    background-color: #7abecc;
+    background-color: #B1BE89;
 }
 
 #orders-pending {
-    background-color: #7CD1C0;
+    background-color: #B1BE89;
 }
 
 .orders {
     text-align: center;
     padding: 10px;
+}
+
+
+.btn-color {
+    background-color: #2F4858;
+    color: #ebeff5;
+}
+
+
+.btn-view {
+    background-color: #2F4858;
+    color: #ebeff5;
+}
+
+
+.form-color {
+    background-color: #F8FAF1;
+}
+
+
+.text-color {
+    color: #ebeff5;
 }

@@ -8,14 +8,14 @@
 <br>
 <div class="row">
     <div class="col-md-3">
-        <div class="card card-body">
+        <div class="card card-body form-color">
             <a class="btn btn-warning" href="{% url 'home' %}"> &#8592; Back to Profile</a>
             <hr>
             <h3 style="text-align: center;">Account Settings</h3>
         </div>
     </div>
     <div class="col-md-9">
-        <div class="card card-body">
+        <div class="card card-body form-color">
             <form method="POST" action="" enctype="multipart/form-data">
                 {% csrf_token %}
                 {{ form.as_p }}

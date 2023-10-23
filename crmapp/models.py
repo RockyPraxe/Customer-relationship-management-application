@@ -13,7 +13,10 @@ class Customer(models.Model):
     date_created = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return self.name
+        if self.name:
+            return self.name
+        else:
+            return "Unnamed Object"
 
 
 class Tag(models.Model):

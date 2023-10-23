@@ -12,6 +12,11 @@ from .filters import OrderFilter
 from .decorators import unauthenticated_user, allowed_users, admin_only
 
 
+# Handles user registration. It displays the registration form,
+# processes form submission, creates a new user account,
+# and redirects to the login page upon successful registration.
+
+
 @unauthenticated_user
 def registerPage(request):
     form = CreateUserForm()
@@ -26,6 +31,11 @@ def registerPage(request):
 
     context = {'form': form}
     return render(request, 'crmapp/register.html', context)
+
+
+# Manages user login. It displays the login form, processes login
+# requests, and redirects users to the home page after successful login.
+# Displays an error message for incorrect credentials.
 
 
 @unauthenticated_user
@@ -45,9 +55,16 @@ def loginPage(request):
     return render(request, 'crmapp/login.html', context)
 
 
+# Logs out the currently authenticated user and redirects to the login page.
+
+
 def logoutUser(request):
     logout(request)
     return redirect('login')
+
+
+# The dashboard view accessible to authenticated users with admin privileges.
+# Retrieves and displays order and customer statistics.
 
 
 @login_required(login_url='login')
@@ -72,6 +89,10 @@ def home(request):
     return render(request, 'crmapp/dashboard.html', context)
 
 
+# The user-specific dashboard, accessible to customers.
+# Displays order statistics for the logged-in customer.
+
+
 @login_required(login_url='login')
 @allowed_users(allowed_roles=['customer'])
 def userPage(request):
@@ -91,6 +112,10 @@ def userPage(request):
     return render(request, 'crmapp/user.html', context)
 
 
+# Allows customers to update their account settings.
+# Displays a form to update customer details.
+
+
 @login_required(login_url='login')
 @allowed_users(allowed_roles=['customer'])
 def accountSettings(request):
@@ -106,12 +131,19 @@ def accountSettings(request):
     return render(request, 'crmapp/account_settings.html', context)
 
 
+# Displays a list of products. Accessible to users with admin privileges.
+
+
 @login_required(login_url='login')
 @allowed_users(allowed_roles=['admin'])
 def products(request):
     products = Product.objects.all()
 
     return render(request, 'crmapp/products.html', {'products': products})
+
+
+# Shows details about a specific customer, including their orders.
+# Provides filtering functionality for orders.
 
 
 @login_required(login_url='login')
@@ -134,8 +166,7 @@ def customer(request, pk_test):
     return render(request, 'crmapp/customer.html', context)
 
 
-# def order(request):
-#     return render(request, 'crmapp/order.html')
+# Allows admin users to create new orders for a specific customer.
 
 
 @login_required(login_url='login')
@@ -162,6 +193,9 @@ def createOrder(request, pk):
     return render(request, 'crmapp/order_form.html', context)
 
 
+# Allows admin users to update order details.
+
+
 @login_required(login_url='login')
 @allowed_users(allowed_roles=['admin'])
 def updateOrder(request, pk):
@@ -178,6 +212,9 @@ def updateOrder(request, pk):
     context = {'form': form}
     print('I got here')
     return render(request, 'crmapp/order_form.html', context)
+
+
+# Allows admin users to delete an order, with a confirmation prompt.
 
 
 @login_required(login_url='login')

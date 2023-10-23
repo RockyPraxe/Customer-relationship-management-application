@@ -4,6 +4,11 @@ from django_filters import DateFilter, CharFilter
 from .models import *
 
 
+# OrderFilter defines filters for the Order model,
+# allowing users to filter and query orders based on criteria such as
+# date range and partial matching of the 'note' field.
+
+
 class OrderFilter(django_filters.FilterSet):
     start_date = DateFilter(field_name="date_created", lookup_expr='gte')
     end_date = DateFilter(field_name="date_created", lookup_expr='lte')

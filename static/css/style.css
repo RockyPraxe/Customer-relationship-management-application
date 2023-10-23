@@ -1,3 +1,4 @@
+/* welcome message in navbar for user */
 .hello-msg {
     font-size: 18px;
     color: #fff;
@@ -5,20 +6,9 @@
 }
 
 
+/* body */
 body {
     background-color: #343A40;
-}
-
-
-footer {
-    position: absolute;
-    left: 0;
-    bottom: 0px;
-    width: 100%;
-    box-sizing: border-box;
-    min-height: 80px;
-    padding-top: 5px;
-    text-align: center;
 }
 
 
@@ -41,8 +31,14 @@ footer {
 }
 
 
+/* style for update, view, search and submit, place order buttons */
 .btn-color {
     background-color: #2F4858;
+    color: #ebeff5;
+}
+
+
+.text-color {
     color: #ebeff5;
 }
 
@@ -53,11 +49,20 @@ footer {
 }
 
 
+/* forms color */
 .form-color {
     background-color: #F8FAF1;
 }
 
 
-.text-color {
-    color: #ebeff5;
+/* footer */
+footer {
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    width: 100%;
+    box-sizing: border-box;
+    min-height: 80px;
+    padding-top: 5px;
+    text-align: center;
 }

@@ -1,3 +1,4 @@
+/* body */
 body,
 html {
     margin: 0;
@@ -6,6 +7,8 @@ html {
     background: #343A40 !important;
 }
 
+
+/* Styling for the user card element */
 .user_card {
     width: 350px;
     margin-top: auto;
@@ -23,6 +26,8 @@ html {
 
 }
 
+
+/* Form container within the user card */
 .form_container {
     margin-top: 20px;
 }
@@ -32,21 +37,27 @@ html {
 
 }
 
+
+/* login button styling */
 .login_btn {
     width: 100%;
     background: #2F4858 !important;
     color: white !important;
 }
 
+
 .login_btn:focus {
     box-shadow: none !important;
     outline: 0px !important;
 }
 
+
 .login_container {
     padding: 0 2rem;
 }
 
+
+/* inputted text into form */
 .input-group-text {
     background: #f7ba5b !important;
     color: white !important;
@@ -54,12 +65,15 @@ html {
     border-radius: 0.25rem 0 0 0.25rem !important;
 }
 
+
 .input_user,
 .input_pass:focus {
     box-shadow: none !important;
     outline: 0px !important;
 }
 
+
+/* message for user */
 #messages {
     background-color: grey;
     color: #fff;

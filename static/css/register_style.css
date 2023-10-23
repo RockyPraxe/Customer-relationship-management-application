@@ -1,3 +1,4 @@
+/* Global Styles */
 body,
 html {
     margin: 0;
@@ -6,6 +7,8 @@ html {
     background: #343A40 !important;
 }
 
+
+/* User Card Styling */
 .user_card {
     width: 350px;
     margin-top: auto;
@@ -20,32 +23,41 @@ html {
     -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 5px;
-
 }
 
+
+/* Form Container */
 .form_container {
     margin-top: 20px;
 }
+
+
 
 #form-title {
     color: #fff;
 }
 
+
+/* Login Button Styling */
 .login_btn {
     width: 100%;
     background: #2F4858 !important;
     color: white !important;
 }
 
+
 .login_btn:focus {
     box-shadow: none !important;
     outline: 0px !important;
 }
 
+
 .login_container {
     padding: 0 2rem;
 }
 
+
+/* inputted text into form */
 .input-group-text {
     background: #f7ba5b !important;
     color: white !important;

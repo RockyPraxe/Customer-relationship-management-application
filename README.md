@@ -46,7 +46,52 @@
 | id | Field |
 |--|--|
 | Customer_id | PK  |
-|name |Charfield|
-|phone|Charfield|
+|name |CharField|
+|phone|CharField|
 |email|EmailField|
 |date_created|DateField|
+
+---
+
+#### Product Model
+
+| id | Field |
+|--|--|
+| Product_id | PK  |
+|name |CharField|
+|price|FloatField|
+|category|CharField|
+|description|CharField|
+|date_created|DateField|
+
+---
+
+#### Order Model
+
+| id | Field |
+|--|--|
+| Order_id | PK  |
+|date_created|DateField|
+|status |CharField|
+|note|FloatField|
+|customer_id|FK|
+|product_tags_id|FK|
+
+---
+
+#### Product_tags Model
+
+| id | Field |
+|--|--|
+| Product_tags | PK  |
+|product_id|FK|
+|tag_id |FK|
+
+---
+
+#### Tag Model
+
+| id | Field |
+|--|--|
+|Tag_id |PK |
+|name|CharField|

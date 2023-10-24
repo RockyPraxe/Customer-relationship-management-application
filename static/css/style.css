@@ -57,7 +57,7 @@ body {
 
 /* footer */
 footer {
-    position: fixed;
+    position: absolute;
     left: 0;
     bottom: 0px;
     width: 100%;
@@ -66,3 +66,12 @@ footer {
     padding-top: 5px;
     text-align: center;
 }
+
+
+/*diferent images size and font depend on screen size*/
+@media screen and (max-width: 820px) {
+    footer {
+        position: relative;
+    }
+}
+

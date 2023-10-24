@@ -27,4 +27,26 @@
  10. [ Content](#content)  
  11. [ Acknowledgements](#acknowledgements)  
 
- ## UX
+## UX
+
+<a name="ux"></a>
+#### Pre-project Planning
+
+> Database Structure
+
+![Lucid Diagram](static/)
+
+- When I decided on my initial concept of CRM Application I knew I needed to understand what type of data I would need to store and the relationships between them.
+- I created the above diagram on lucidchart to help guide me.
+
+
+### Database Schema
+#### Customer Model
+
+| id | Field |
+|--|--|
+| Customer_id | PK  |
+|name |Charfield|
+|phone|Charfield|
+|email|EmailField|
+|date_created|DateField|

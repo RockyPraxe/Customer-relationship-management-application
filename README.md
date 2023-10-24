@@ -121,3 +121,45 @@ I only deviate from this where it helps user experience in regards to buttons, l
 - Streamline Sales and Lead Management: One of the key goals is to streamline the sales process, making it more efficient and effective. This includes managing leads, tracking sales opportunities, and ultimately increasing revenue.
 - Enhance Marketing Effectiveness: The CRM system aims to improve marketing efforts by automating campaigns, segmenting customer lists, and providing data-driven insights. The goal is to boost the return on investment (ROI) for marketing activities.
   
+## Wireframes
+
+###  Wireframes
+> Home Page
+
+![Home page balsamic](static/)
+
+My goal for this project was to create a simple sleek website that allowed the admin create, change, filter or delete an order and the customer can see his profile with the possibility of changing the data and also see what and when he ordered and the status of his order.
+![Home page](static/)
+
+>  Customer Page
+![Customer page](static/)
+
+>  Products Page
+![Products page](static/)
+
+>  Order Page
+![Order page](static/)
+
+>  Update Order Page
+![Update order page](static/)
+
+>  Delete Order Page
+![Delete order page](static/)
+
+> User Page
+![User page](static/)
+
+> User Settings Page
+![User settings page](static/)
+
+> Login Page
+![Login page](static/)
+ 
+>  Register Page
+![Registration page](static/)
+
+## Agile Development
+
+<a name="agile"></a>
+
+### Agile Overview

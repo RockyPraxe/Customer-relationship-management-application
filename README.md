@@ -358,6 +358,177 @@ If the specific user story does not auto pop up then please click on it from the
 
 ---
 
+<a name="testing"></a>
+## Testing
+
+
+### Testing Phase
+
+#### Manual Testing
+
+> Each user story was manually tested in line with intended functionality on both desktop & mobile.
+> As this project was driven by my own User Stories I  felt manual testing was applicable on all logic code.
+
+
+>If the intended outcome completes then this will be flagged as pass. If it does not then this is a fail.
+
+
+#### Account Registration Tests
+| Test |Result  |
+|--|--|
+| User can create account | Pass |
+| User can log into account| Pass|
+|User can log out of account|Pass|
+
+---
+
+#### Account Security Tests
+
+| Test |Result  |
+|--|--|
+|Non logged in user can make nothing | Pass |
+|Non logged in user cannot access profile page| Pass|
+|Non superuser cannot access admin panel|Pass|
+
+--- 
+
+#### Profile Tests
+
+| Test |Result  |
+|--|--|
+|User can edit their user name from the profile page | Pass |
+|User can edit / add a phone number to their account| Pass|
+|User can add / edit their email address|Pass|
+
+---
+
+#### Admin Tests
+
+| Test |Result  |
+|--|--|
+|Admin can add products |Pass|
+|Admin can create the order|Pass|
+|Admin can create the order|Pass|
+|Admin can update the order|Pass|
+|Items they display correctly on front-end when updated / added|Pass|
+
+---
+
+### User Tests
+
+> Creating user
+![Creating user](static/)
+---
+> Wrong password message
+![Wrong password message](static/)
+---
+> Account created
+![Account created](static/)
+---
+> User login
+![User login](static/)
+---
+> Updating user information
+![Updating user](static/)
+---
+> Personal info updated in admin view
+![Personal info](static/)
+---
+> Creating new order in admin view
+![Creating user](static/)
+---
+> Order confirmed
+![Order confirmed](static/)
+---
+> Update the order
+![Creating user](static/)
+---
+> Update confirm
+![Update confirm](static/)
+---
+> Deletion of the order
+![Order delete](static/)
+---
+
+
+## Google Lighthouse Testing
+
+### Desktop
+> dashboard.html
+
+![Google Lighthouse Desktop](static/)
+
+
+### Mobile
+> dashboard.html
+
+![Google Lighthouse Mobile](static/)
+
+## HTML W3 Validation
+
+### base.html
+
+
+![W3 Validation checker](static/)
+#### Result: No Errors
+
+### CSS Validation
+
+
+![w3 Jigsaw CSS checker](static/)
+#### Result: Pass - No Errors
+
+[Back to Top of page](#contents)
+
+---
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

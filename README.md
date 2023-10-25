@@ -182,7 +182,7 @@ If the specific user story does not auto pop up then please click on it from the
 
  1. [USER STORY: Create Superuser ](https://github.com/RockyPraxe/Customer-relationship-management-application/issues/10)
  2. [USER STORY: Admin Order Management](https://github.com/RockyPraxe/Customer-relationship-management-application/issues/5)
- 3. [USER STORY: Admin Full Access](CRUD)#3](https://github.com/RockyPraxe/Customer-relationship-management-application/issues/4)
+ 3. [USER STORY: Admin Full Access](https://github.com/RockyPraxe/Customer-relationship-management-application/issues/4)
  4. [USER STORY: Admin Customer Management](https://github.com/RockyPraxe/Customer-relationship-management-application/issues/6)
  5. [USER STORY: Order Creation](https://github.com/RockyPraxe/Customer-relationship-management-application/issues/8)
  6. [USER STORY: Order Management](https://github.com/RockyPraxe/Customer-relationship-management-application/issues/9)
@@ -194,3 +194,38 @@ If the specific user story does not auto pop up then please click on it from the
 [Back to Top of page](#contents)
 
 ---
+
+## Features
+
+<a name="features"></a>
+
+#### User based Features Implemented:
+
+- **Users/Admin can** create an customer or user in admin panel (**Create**)
+- **Users/Admin can** log into their account
+- **Users/Admin can** log out of their account
+- **Users/Admin can** create the order for the customer
+- **Users/Admin can** update the order for the cutomer
+- **Users/Admin can** update the customer's personal data in the admin panel
+- **Users/Admin can** delete the customer's order
+- **Users/Admin can** filter the customer orders
+- **Users/Admin can** see the product page
+- **Users/Admin can** see the page with customers and their orders
+- **Users/Admin can** click on social media links in the footer
+- **Users/Admin can** see the status of the order
+
+- **Users/Customers can** create an account (**Create**)
+- **Users/Customers can** log into their account
+- **Users/Customers can** log out of their account
+- **Users/Customers can** see the status of the order
+- **Users/Customers can** change personal data
+- **Users/Customers can** click on social media links in the footer
+
+#### Account restrictions:
+
+- **Users/Customers cannot** create the order
+- **Users/Customers cannot** update the order
+- **Users/Customers cannot** delete the order
+- **Users/Customers cannot** filter the orders
+- **Users/Customers cannot** see the product page
+- **Users/Customers cannot** see the page with all the customers and their orders

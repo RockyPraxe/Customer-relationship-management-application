@@ -20,12 +20,11 @@
  3. [ Features ](#features)  
  4. [ Features Left to Implement ](#left)  
  5. [ Technology used ](#tech) 
- 6. [ Testing ](#testing)  
- 7. [ Bugs ](#bugs)  
- 8. [ Deployment](#deployment)
- 9. [ Credits](#credits)
- 10. [ Content](#content)  
- 11. [ Acknowledgements](#acknowledgements)  
+ 6. [ Testing ](#testing)   
+ 7. [ Deployment](#deployment)
+ 8. [ Credits](#credits)
+ 9. [ Content](#content)  
+ 10. [ Acknowledgements](#acknowledgements)  
 
 ## UX
 

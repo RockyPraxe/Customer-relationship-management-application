@@ -1,6 +1,6 @@
 # CRM Application
 
-![am I responsive screenshot](static/)
+![am I responsive screenshot](static/images/bytes_responsive.PNG)
 
 ## Customer relationship management application
 > A CRM (Customer Relationship Management) application is a software solution that enables businesses to effectively manage and optimize their interactions with customers and potential clients. The primary goal of a CRM system is to centralize and streamline customer-related information, enhance communication, and improve overall customer satisfaction.
@@ -33,7 +33,7 @@
 
 > Database Structure
 
-![Lucid Diagram](static/)
+![Lucid Diagram](static/images/erd_diagram_lucidchart.PNG)
 
 - When I decided on my initial concept of CRM Application I knew I needed to understand what type of data I would need to store and the relationships between them.
 - I created the above diagram on lucidchart to help guide me.
@@ -125,29 +125,32 @@ I only deviate from this where it helps user experience in regards to buttons, l
 ###  Wireframes
 > Home Page
 
-![Home page balsamic](static/)
+![Home page balsamic](<static/images/CRM APP Dashboard.png>)
 
 My goal for this project was to create a simple sleek website that allowed the admin create, change, filter or delete an order and the customer can see his profile with the possibility of changing the data and also see what and when he ordered and the status of his order.
 
 ---
 
-![Responsive1](static/)
+![Responsive1](static/images/responsive1.PNG)
 
 ---
 
-![Responsive1](static/)
+![Responsive2](static/images/responsive2.PNG)
 
 ---
 
-![Responsive1](static/)
+![Responsive3](static/images/responsive3.PNG)
 
 ---
 
-![Responsive1](static/)
+![Responsive4](static/images/responsive4.PNG)
 
 ---
 
-![Responsive1](static/)
+![Responsive5](static/images/responsive5.PNG)
+---
+
+![Responsive6](static/images/responsive6.PNG)
 
 ## Agile Development
 
@@ -243,19 +246,19 @@ If the specific user story does not auto pop up then please click on it from the
 
 ---
 
-> Home Page
+> Home Page - Admin view
 
 ---
 
-![Home page](static/)
+![Home page](static/images/admin_view.PNG)
 
 ---
 
-> Customer Page
+> Customer Page - Admin view
 
 ---
 
-![Customer page](static/)
+![Customer page](static/images/customer_view.PNG)
 
 ---
 
@@ -263,7 +266,7 @@ If the specific user story does not auto pop up then please click on it from the
 
 ---
 
-![Products page](static/)
+![Products page](static/images/products.PNG)
 
 ---
 
@@ -271,7 +274,7 @@ If the specific user story does not auto pop up then please click on it from the
 
 ---
 
-![Order page](static/)
+![Order page](static/images/admin_view.PNG)
 
 ---
 
@@ -279,7 +282,7 @@ If the specific user story does not auto pop up then please click on it from the
 
 ---
 
-![Update order page](static/)
+![Update order page](static/images/update_order.PNG)
 
 ---
 
@@ -287,7 +290,7 @@ If the specific user story does not auto pop up then please click on it from the
 
 ---
 
-![Delete order page](static/)
+![Delete order page](static/images/update_order.PNG)
 
 ---
 
@@ -295,7 +298,7 @@ If the specific user story does not auto pop up then please click on it from the
 
 ---
 
-![User page](static/)
+![User page](static/images/user_view.PNG)
 
 ---
 
@@ -303,7 +306,7 @@ If the specific user story does not auto pop up then please click on it from the
 
 ---
 
-![User settings page](static/)
+![User settings page](static/images/user_setings.PNG)
 
 ---
 
@@ -311,7 +314,7 @@ If the specific user story does not auto pop up then please click on it from the
 
 ---
 
-![Login page](static/)
+![Login page](static/images/login_page.PNG)
 
 ---
  
@@ -319,7 +322,7 @@ If the specific user story does not auto pop up then please click on it from the
 
 ---
 
-![Registration page](static/)
+![Registration page](static/images/register_page.PNG)
 
 ---
 
@@ -327,7 +330,7 @@ If the specific user story does not auto pop up then please click on it from the
 
 ---
 
-![Footer](static/)
+![Footer](static/images/user_setings.PNG)
 
 ---
 
@@ -463,37 +466,37 @@ Password : tester100
 ### User Tests
 
 > Creating user
-![Creating user](static/)
+![Creating user](static/images/creating_user.PNG)
 ---
 > Wrong password message
-![Wrong password message](static/)
+![Wrong password message](static/images/fail_msg_usercreation.PNG)
 ---
 > Account created
-![Account created](static/)
+![Account created](static/images/account_created.PNG)
 ---
 > User login
-![User login](static/)
+![User login](static/images/new_user_login.PNG)
 ---
 > Updating user information
-![Updating user](static/)
+![Updating user](static/images/updating_user_info.PNG)
 ---
 > Personal info updated in admin view
-![Personal info](static/)
+![Personal info](static/images/personal_info_updated.PNG)
 ---
 > Creating new order in admin view
-![Creating user](static/)
+![Creating user](static/images/placed_order_new_user.PNG)
 ---
 > Order confirmed
-![Order confirmed](static/)
+![Order confirmed](static/images/order_done_for_new_user.PNG)
 ---
 > Update the order
-![Creating user](static/)
+![Creating user](static/images/update_new_user.PNG)
 ---
 > Update confirm
-![Update confirm](static/)
+![Update confirm](static/images/update_confirm.PNG)
 ---
 > Deletion of the order
-![Order delete](static/)
+![Order delete](static/images/delete_order_new_user.PNG)
 ---
 
 
@@ -502,26 +505,29 @@ Password : tester100
 ### Desktop
 > dashboard.html
 
-![Google Lighthouse Desktop](static/)
+![Google Lighthouse Desktop](static/images/lighthouse_desktop.PNG)
 
 
 ### Mobile
 > dashboard.html
 
-![Google Lighthouse Mobile](static/)
+![Google Lighthouse Mobile](static/images/lighthouse_mobile.PNG)
 
 ## HTML W3 Validation
 
 ### base.html
 
 
-![W3 Validation checker](static/)
+![W3 Validation checker](static/images/html_checker_heroku.PNG)
+#### Result: No Errors
+
+![W3 Validation checker](static/images/html_checker.PNG)
 #### Result: No Errors
 
 ### CSS Validation
 
 
-![w3 Jigsaw CSS checker](static/)
+![w3 Jigsaw CSS checker](static/images/css_checker.PNG)
 #### Result: Pass - No Errors
 
 [Back to Top of page](#contents)

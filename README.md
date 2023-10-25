@@ -403,6 +403,11 @@ If the specific user story does not auto pop up then please click on it from the
 <a name="testing"></a>
 ## Testing
 
+### Admin for testing purposes
+
+>I created a test_admin for the evaluator of this project so that he could try out all the functionalities
+ User name : TestAdmin
+ Password : tester100
 
 ### Testing Phase
 
@@ -597,17 +602,41 @@ Creating a clone enables you to make a copy of the repository at that point in t
 <a name="credits"></a>
 ## Credits
 
+##### Dennis ivy
+  - I watched some of Dennis's videos on youtube around django signals and extending the user model.
+  - This inspired me to take this action however I followed on from the django documentation.
+  
+  
+##### Md bootstrap
+  - I went through the bootstrap navigation information and footer information to determine how best to approach my desired design.
+  - I always find Md Bootstrap helpful with examples of how best to implement boostrap components.
 
+[Back to Top of page](#contents)
 
+---
 
+<a name="content"></a>
+## Content & Resources
 
+##### Django Documentation
+  - Read through the django documentation multiple times when trying to implement models and other content.
+  
+##### W3 Schools
+  - Used for reference throughout for simple css examples.
+  
+##### Code Institute
+  - Course content for portfolio project 4 helped greatly in being able to complete this project.
+  - I found the walkthroughs informative and well paced.
+  - Initial structure based heavily on the CI walkthrough until I got more comfortable with the framework and started to make it my own.
+  - Some legacy code regarding nav remains.
 
+[Back to Top of page](#contents)
 
+<a name="acknowlegements"></a>
+## Acknowledgements
 
-
-
-
-
+### The tutors at Code institute
+> To all the tutors in CI, thank you for your help!!
 
 
 

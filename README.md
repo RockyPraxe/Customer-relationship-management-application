@@ -129,6 +129,8 @@ I only deviate from this where it helps user experience in regards to buttons, l
 ![Home page balsamic](static/)
 
 My goal for this project was to create a simple sleek website that allowed the admin create, change, filter or delete an order and the customer can see his profile with the possibility of changing the data and also see what and when he ordered and the status of his order.
+
+> Home Page
 ![Home page](static/)
 
 >  Customer Page
@@ -163,3 +165,32 @@ My goal for this project was to create a simple sleek website that allowed the a
 <a name="agile"></a>
 
 ### Agile Overview
+
+This project was started alongside a GitHub Projects Page to track and manage the expected workload ahead.
+The aim was to set out my expected workload, list the epics and then break them down into user stories to work towards and ultimately finish the site in good time.
+
+To see Kanban please click [here](https://github.com/users/RockyPraxe/projects/3).
+
+At the initial stages I decided on 2 epics and 10 user stories. When I started working on user stories and epics I moved them from **todo** to **in progress**, when I finished them I moved them from **in progress** to **done**
+
+#### User stories
+
+#####  Completed User Stories
+
+To view any of the expanded details of the user stories please click on a user story below to be taken to the Kanban project.
+If the specific user story does not auto pop up then please click on it from the project page and you will see the details and comments.
+
+ 1. [USER STORY: Create Superuser ](https://github.com/RockyPraxe/Customer-relationship-management-application/issues/10)
+ 2. [USER STORY: Admin Order Management](https://github.com/RockyPraxe/Customer-relationship-management-application/issues/5)
+ 3. [USER STORY: Admin Full Access](CRUD)#3](https://github.com/RockyPraxe/Customer-relationship-management-application/issues/4)
+ 4. [USER STORY: Admin Customer Management](https://github.com/RockyPraxe/Customer-relationship-management-application/issues/6)
+ 5. [USER STORY: Order Creation](https://github.com/RockyPraxe/Customer-relationship-management-application/issues/8)
+ 6. [USER STORY: Order Management](https://github.com/RockyPraxe/Customer-relationship-management-application/issues/9)
+ 7. [USER STORY:Settings](https://github.com/RockyPraxe/Customer-relationship-management-application/issues/7)
+ 8. [USER STORY: User Registration](https://github.com/RockyPraxe/Customer-relationship-management-application/issues/1)
+ 9. [USER STORY: User Login](https://github.com/RockyPraxe/Customer-relationship-management-application/issues/2)
+ 10. [USER STORY: User Logout](https://github.com/RockyPraxe/Customer-relationship-management-application/issues/3)
+
+[Back to Top of page](#contents)
+
+---

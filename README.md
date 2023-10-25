@@ -130,35 +130,16 @@ I only deviate from this where it helps user experience in regards to buttons, l
 
 My goal for this project was to create a simple sleek website that allowed the admin create, change, filter or delete an order and the customer can see his profile with the possibility of changing the data and also see what and when he ordered and the status of his order.
 
-> Home Page
-![Home page](static/)
-
->  Customer Page
-![Customer page](static/)
-
->  Products Page
-![Products page](static/)
-
->  Order Page
-![Order page](static/)
-
->  Update Order Page
-![Update order page](static/)
-
->  Delete Order Page
-![Delete order page](static/)
-
-> User Page
-![User page](static/)
-
-> User Settings Page
-![User settings page](static/)
-
-> Login Page
-![Login page](static/)
- 
->  Register Page
-![Registration page](static/)
+---
+![Responsive1](static/)
+---
+![Responsive1](static/)
+---
+![Responsive1](static/)
+---
+![Responsive1](static/)
+---
+![Responsive1](static/)
 
 ## Agile Development
 
@@ -214,6 +195,8 @@ If the specific user story does not auto pop up then please click on it from the
 - **Users/Admin can** click on social media links in the footer
 - **Users/Admin can** see the status of the order
 
+---
+
 - **Users/Customers can** create an account (**Create**)
 - **Users/Customers can** log into their account
 - **Users/Customers can** log out of their account
@@ -229,3 +212,154 @@ If the specific user story does not auto pop up then please click on it from the
 - **Users/Customers cannot** filter the orders
 - **Users/Customers cannot** see the product page
 - **Users/Customers cannot** see the page with all the customers and their orders
+
+#### Website features:
+
+##### Dynamic creation, editing, filtering and deletion of orders
+- The website dynamically displays orders that were updated on the back-end and displayed on the front-end depending on which product the user selects.
+– The website dynamically displays the orders that were created on the back-end and displayed on the front-end.
+– The website filters dynamically the orders that were created on the back-end and displayed on the front-end.
+– We can delete the order on the website and it will be dynamically updated.
+
+##### Registration system
+- The customer can register on the website
+- The customer can log in to the website
+- The customer can log out of the website
+
+
+### dashboard.html
+
+#### Desktop
+
+> Desktop Navigation
+
+---
+
+> Home Page
+![Home page](static/)
+
+---
+
+> Customer Page
+![Customer page](static/)
+
+---
+
+>  Products Page
+![Products page](static/)
+
+---
+
+>  Order Page
+![Order page](static/)
+
+---
+
+>  Update Order Page
+![Update order page](static/)
+
+---
+
+>  Delete Order Page
+![Delete order page](static/)
+
+---
+
+> User Page
+![User page](static/)
+
+---
+
+> User Settings Page
+![User settings page](static/)
+
+---
+
+> Login Page
+![Login page](static/)
+
+---
+ 
+>  Register Page
+![Registration page](static/)
+
+---
+
+>  Footer 
+![Footer](static/)
+
+---
+
+[Back to Top of page](#contents)
+
+---
+
+<a name="left"></a>
+## Features left to Implement 
+
+- Add the possibility for the customer to reset or change the password
+- Add the option for the customer to upload a profile photo
+- Add an e-mail notification for any changes associated with a change in personal data or an order
+- Add images and a more detailed description to the products
+
+[Back to Top of page](#contents)
+
+---
+
+<a name="tech"></a>
+##  Technology Used
+
+### Html
+
+ - Used to structure my webpages and the base templating language
+
+### CSS
+
+ - Custom CSS was written on large chunks of this site to make it as close to the wireframes as I felt it needed to be.
+
+### JavaScript
+
+ -  Used for registration page.
+
+### Python
+
+ -  Used for the logic in this project.
+
+### Django
+
+ -  Framework used to build this project. Provides a ready installed admin panel and includes many helper template tags that make writing code quick and efficient.
+
+### Font Awesome
+
+ -  Icon library used for the profile and admin panel section.
+
+### Bootstrap 
+ - Used as the base front end framework to work alongside Django
+
+### Jinja Templating with Django
+ - Used to render logic within html documents and make the website more dynamic.
+
+### GitHub
+ - Used to store the code for this project & for the projects Kanban board used to complete it.
+
+### Heroku
+- Used to host and deploy this project
+
+### Heroku PostgreSQL
+-Heroku PostgreSQL was used as the database for this project during development and in production.
+
+### Cloudinary
+- Used to host the static files for this project including user profile images.
+
+### Git
+- Used for version control throughout the project and to ensure a good clean record of work done was maintained.
+
+[Back to Top of page](#contents)
+
+---
+
+
+
+
+
+

@@ -405,9 +405,9 @@ If the specific user story does not auto pop up then please click on it from the
 
 ### Admin for testing purposes
 
->I created a test_admin for the evaluator of this project so that he could try out all the functionalities
- User name : TestAdmin
- Password : tester100
+I created a test_admin for the evaluator of this project so that he could try out all the functionalities
+User name : TestAdmin
+Password : tester100
 
 ### Testing Phase
 
